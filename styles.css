@@ -3,3 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+}
+
+.project-card > div {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.project-card > img {
+  width: 100%;
+}
+
+.project-name {
+  flex: 1;
+}
+
+svg {
+  width: 24px;
+}
