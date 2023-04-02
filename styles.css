@@ -13,10 +13,52 @@ body > * {
   padding: 0px 100px;
 }
 
-section {
-  height: 400px;
+h1 {
+  margin-bottom: 12px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(175deg, #0891B2 65%, white 35%);
   margin-bottom: 50px;
+  padding: 50px 100px;
+}
+
+.header-img-container {
+  position: relative;
+}
+
+.header-img-container > img {
+  max-width: 400px;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.header-img-container span {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  left: 45%;
+}
+
+.about-me {
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.about-me > h1 {
+  margin-bottom: 20px;
+}
+
+.about-me > div {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 12px;
+  margin-top: 20px;
 }
 
 main {
@@ -33,6 +75,7 @@ main {
   display: flex;
   margin-bottom: 8px;
   padding: 10px;
+  gap: 12px;
 }
 
 .project-card > p {
@@ -48,6 +91,7 @@ main {
 }
 
 svg {
+  fill: #505050;
   width: 24px;
 }
 
@@ -75,6 +119,10 @@ footer > div {
   body > * {
     padding: 0px 20px;
   }
+
+  header {
+    background: linear-gradient(160deg, #0891B2 65%, white 35%);
+}
 
   footer {
     flex-direction: column;
