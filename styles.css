@@ -10,6 +10,10 @@ body {
 }
 
 body > * {
+  padding: 50px 100px;
+}
+
+body > h1 {
   padding: 0px 100px;
 }
 
@@ -56,15 +60,16 @@ header {
 
 .about-me > div {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
   gap: 12px;
   margin-top: 20px;
 }
 
-main {
+.projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
+  padding-top: 0px;
 }
 
 .project-card {
@@ -91,7 +96,7 @@ main {
 }
 
 svg {
-  fill: #505050;
+  fill: #313131;
   width: 24px;
 }
 
@@ -102,27 +107,73 @@ footer {
   background-color: #0891B2;
   color: white;
   margin-top: 50px;
-  padding: 50px 100px;
 }
 
-footer img {
-  max-width: 400px;
+.footer-img-container {
+  width: 400px;
+  min-width: 250px;
+  height: 300px;
+  background-image: url(./pexels-ramon-linares-14087360.jpg);
+  background-size: cover;
 }
 
-footer > div {
-  width: 300px;
+.footer-contact-container {
+  min-width: 300px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-@media (max-width: 600px) {
+.footer-contact-container > div:not(:last-child) > svg {
+  fill: white;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 15px;
+}
+
+@media (max-width: 1000px) {
   body > * {
-    padding: 0px 20px;
+    padding: 50px 35px;
+  }
+
+  body > h1 {
+    padding: 0px 35px;
+  }
+
+  footer {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  body > * {
+    padding: 50px 20px;
   }
 
   header {
-    background: linear-gradient(160deg, #0891B2 65%, white 35%);
-}
+    background: linear-gradient(160deg, #0891B2 50%, white 50%);
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
+  .about-me {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .about-me > h1 {
+    text-align: center;
+  }
+
+  .about-me > div {
+    justify-content: center;
+  }
+
+  body > h1 {
+    padding: 0px 20px;
+  }
 
   footer {
     flex-direction: column;
@@ -130,8 +181,8 @@ footer > div {
     padding: 50px 0px 0px 0px;
   }
 
-  footer img {
+  .footer-img-container {
     margin-top: 20px;
-    max-width: 100%;
+    width: 100%;
   }
 }
