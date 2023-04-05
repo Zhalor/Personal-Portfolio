@@ -7,6 +7,7 @@
 body {
   display: flex;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body > * {
@@ -15,6 +16,11 @@ body > * {
 
 body > h1 {
   padding: 0px 100px;
+}
+
+svg {
+  fill: #313131;
+  width: 32px;
 }
 
 h1 {
@@ -32,6 +38,8 @@ header {
 
 .header-img-container {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .header-img-container > img {
@@ -42,9 +50,10 @@ header {
 
 .header-img-container span {
   position: absolute;
+  align-self: flex-end;
   color: white;
-  bottom: 10px;
-  left: 45%;
+  font-size: 2.5rem;
+  z-index: 1;
 }
 
 .about-me {
@@ -95,11 +104,6 @@ header {
   flex: 1;
 }
 
-svg {
-  fill: #313131;
-  width: 24px;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -109,19 +113,16 @@ footer {
   margin-top: 50px;
 }
 
-.footer-img-container {
-  width: 400px;
-  min-width: 250px;
-  height: 300px;
-  background-image: url(./pexels-ramon-linares-14087360.jpg);
-  background-size: cover;
-}
-
 .footer-contact-container {
+  max-width: 350px;
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 4px;
+}
+
+.footer-contact-container > p:first-of-type {
+  margin-bottom: 20px;
 }
 
 .footer-contact-container > div:not(:last-child) > svg {
@@ -133,6 +134,29 @@ footer {
   gap: 15px;
 }
 
+.phone-number,
+.email-address {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.email-address {
+  margin-top: 20px;
+}
+
+.phone-number {
+  margin-bottom: 20px;
+}
+
+.footer-img-container {
+  width: 400px;
+  min-width: 250px;
+  height: 300px;
+  background-image: url(./pexels-ramon-linares-14087360.jpg);
+  background-size: cover;
+}
+
 @media (max-width: 1000px) {
   body > * {
     padding: 50px 35px;
@@ -140,6 +164,22 @@ footer {
 
   body > h1 {
     padding: 0px 35px;
+  }
+
+  .header-img-container > img {
+    width: 400px;
+    margin-bottom: 75px;
+  }
+
+  .header-img-container span {
+    align-self: flex-start;
+    left: 92%;
+    white-space: nowrap;
+  }
+
+  .about-me {
+    margin-top: 75px;
+    width: 300px;
   }
 
   footer {
@@ -158,9 +198,21 @@ footer {
     padding-top: 20px;
   }
 
+  .header-img-container > img {
+    width: 400px;
+    margin-bottom: 0px;
+  }
+
+  .header-img-container span {
+    align-self: flex-end;
+    left: auto;
+    white-space: nowrap;
+  }
+
   .about-me {
     box-shadow: none;
     background-color: transparent;
+    margin-top: 0px;
   }
 
   .about-me > h1 {
@@ -179,6 +231,14 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 50px 0px 0px 0px;
+  }
+
+  .footer-contact-container h1 {
+    align-self: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
   }
 
   .footer-img-container {
