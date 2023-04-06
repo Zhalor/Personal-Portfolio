@@ -20,7 +20,7 @@ body > h1 {
 
 svg {
   fill: #313131;
-  width: 32px;
+  width: 28px;
 }
 
 h1 {
@@ -29,8 +29,8 @@ h1 {
 
 header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background: linear-gradient(175deg, #0891B2 65%, white 35%);
   margin-bottom: 50px;
   padding: 50px 100px;
@@ -43,9 +43,8 @@ header {
 }
 
 .header-img-container > img {
-  max-width: 400px;
+  width: 300px;
   box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.25);
-  z-index: 1;
 }
 
 .header-img-container span {
@@ -53,7 +52,6 @@ header {
   align-self: flex-end;
   color: white;
   font-size: 2.5rem;
-  z-index: 1;
 }
 
 .about-me {
@@ -71,7 +69,11 @@ header {
   display: flex;
   justify-content: flex-end;
   gap: 12px;
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.about-me > .spacer {
+  display: none;
 }
 
 .projects-container {
@@ -157,7 +159,7 @@ footer {
   background-size: cover;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   body > * {
     padding: 50px 35px;
   }
@@ -166,20 +168,37 @@ footer {
     padding: 0px 35px;
   }
 
+  header {
+    justify-content: normal;
+  }
+
   .header-img-container > img {
-    width: 400px;
     margin-bottom: 75px;
+    z-index: 1;
   }
 
   .header-img-container span {
     align-self: flex-start;
     left: 92%;
     white-space: nowrap;
+    z-index: 1;
   }
 
   .about-me {
-    margin-top: 75px;
-    width: 300px;
+    position: absolute;
+    max-width: 100%;
+    min-width: 350px;
+    margin-right: 35px;
+    left: 175px;
+    top: 105px;
+  }
+
+  .about-me > .spacer {
+    display: block;
+    float: left;
+    width: 150px;
+    height: 220px;
+    margin: 0px;
   }
 
   footer {
@@ -187,7 +206,7 @@ footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   body > * {
     padding: 50px 20px;
   }
@@ -199,7 +218,6 @@ footer {
   }
 
   .header-img-container > img {
-    width: 400px;
     margin-bottom: 0px;
   }
 
@@ -210,9 +228,16 @@ footer {
   }
 
   .about-me {
+    position: relative;
+    top: auto;
+    left: auto;
     box-shadow: none;
     background-color: transparent;
-    margin-top: 0px;
+    margin: 50px 0px 0px 0px;
+  }
+
+  .about-me > .spacer {
+    display: none;
   }
 
   .about-me > h1 {
@@ -225,6 +250,7 @@ footer {
 
   body > h1 {
     padding: 0px 20px;
+    text-align: center;
   }
 
   footer {
