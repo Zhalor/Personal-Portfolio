@@ -164,17 +164,23 @@ footer {
 
 @media (max-width: 900px) {
   body > * {
-    padding: 50px 35px;
+    padding: 50px 30px;
   }
 
   body > h1 {
     padding: 0px 35px;
   }
 
+  header {
+    background: linear-gradient(160deg, #0891B2 50%, white 50%);
+  }
+
   .header-container {
+    position: relative;
+    width: 500px;
     justify-content: normal;
-    width: fit-content;
-    padding: 50px 50px;
+    padding: 50px 0px;
+    margin: 0px auto 50px auto;
   }
 
   .header-img-container > img {
@@ -191,10 +197,10 @@ footer {
 
   .about-me {
     position: absolute;
-    min-width: 300px;
+    width: 350px;
     margin-right: 85px;
-    left: 220px;
-    top: 183px;
+    left: 135px;
+    top: 118px;
   }
 
   .about-me > .spacer {
@@ -222,6 +228,7 @@ footer {
   .header-container {
     flex-direction: column;
     padding-top: 20px;
+    width: auto;
   }
 
   .header-img-container > img {
@@ -240,7 +247,7 @@ footer {
     left: auto;
     box-shadow: none;
     background-color: transparent;
-    margin: 50px 0px 0px 0px;
+    margin: 60px 0px 0px 0px;
   }
 
   .about-me > .spacer {
